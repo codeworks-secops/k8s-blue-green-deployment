@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-codeday-public-service
+  labels:
+    app: nginx-codeday
+    role: $DCK_IMAGE_SUFFIX
+    env: prod
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx-codeday
+    role: $DCK_IMAGE_SUFFIX
+  ports:
+    - port: 80
+      targetPort: 80

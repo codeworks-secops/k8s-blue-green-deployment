@@ -1,0 +1,16 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: nginx-codeday-blue
+  labels:
+    app: nginx-codeday
+    role: codeday-v1-blue
+    env: preprod
+spec:
+  type: LoadBalancer
+  selector:
+    app: nginx-codeday
+    role: codeday-v1-blue
+  ports:
+    - port: 9000
+      targetPort: 80

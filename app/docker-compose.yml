@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+
+  codeday-v1:
+    container_name: nginx-codeday-v1-blue
+    image: nginx-codeday-v1-blue
+    build:
+      context: ./codeday-v1-blue
+      dockerfile: Dockerfile
+    ports:
+     - 8080:80
+
+  codeday-v2:
+    container_name: nginx-codeday-v2-green
+    image: nginx-codeday-v2-green
+    build:
+      context: ./codeday-v2-green
+      dockerfile: Dockerfile
+    ports:
+     - 8081:80

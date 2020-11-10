@@ -1,0 +1,2 @@
+sed 's/\$DCK_IMAGE_SUFFIX'"/$DCK_IMAGE_SUFFIX/g" |
+tee
