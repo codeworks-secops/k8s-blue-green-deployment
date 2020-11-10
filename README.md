@@ -10,7 +10,7 @@ And the second version V2 looks like :
 
 <img src="./screenshots/codeday_v2.png" alt="v2" width="500"/>
 
-The goal is to insure that the version V2 of the webiste is deployed with zero-downtime after all checks pass.
+The goal is to apply the Blue Green strategy deployment to insure that the version V2 of the webiste is deployed with zero-downtime after all checks pass.
 
 I will start by playing with docker-compose techologie.
 
